@@ -1,6 +1,6 @@
 
 
-#include "checking_input.h"
+#include "header.h"
 
 
 
@@ -533,7 +533,7 @@ void search_employee(void)
     fflush(stdin);
     clear_newline(employee_name);
 
-    fptr = fopen("data_base.txt","r");
+    fptr = fopen("data_base.dat","r");
     if(fptr == '\0')
         printf("can't open file from load function.\n");
 
