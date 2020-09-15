@@ -424,7 +424,6 @@ void check_saving(void)
 }
 
 /*************************************************************************************************/
-
 void load(void)
 {
     char* line;
@@ -433,27 +432,20 @@ void load(void)
 
     line = (char*)malloc(250*sizeof(char));
     arg = (char**)malloc(10*sizeof(char*));
+
     fptr = fopen("data_base.dat","r");
-
-
     if(fptr == '\0')
         printf("can't open file from load function.\n");
-
-
 
     int i=0;
     int j=0;
     int counter=0;
     int employee_number=1;
 
-
     *(arg+j) = line;
-
     while(!feof(fptr))
     {
-
         line[counter] = getc(fptr);
-
         if(line[counter] == '\n')
         {
             line[counter] = '\0';
